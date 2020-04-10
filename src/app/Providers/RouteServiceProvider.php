@@ -39,6 +39,10 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapFrontRoutes();
+
+        $this->mapAdminRoutes();
+
         //
     }
 
@@ -69,5 +73,31 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware('api')
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
+    }
+
+    /**
+     * Define the "front" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapFrontRoutes()
+    {
+        Route::namespace($this->namespace)
+             ->group(base_path('routes/front.php'));
+    }
+
+    /**
+     * Define the "admin" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapAdminRoutes()
+    {
+        Route::namespace($this->namespace)
+             ->group(base_path('routes/admin.php'));
     }
 }
