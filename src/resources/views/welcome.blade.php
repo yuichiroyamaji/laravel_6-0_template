@@ -62,6 +62,19 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script>
+          $(function(){
+            // $.cookie("key", "value", { expires: 日数, path: 'パス'、domain: 'ドメイン', secure: true|false });
+            // var tmp = $.cookie("key");
+            document.cookie = 'name=111';
+            console.log(document.cookie);
+          });
+        </script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">

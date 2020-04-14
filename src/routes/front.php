@@ -13,11 +13,14 @@
 
 Route::domain(config('domain.front'))->group(function () {
 
-	// Route::group(['namespace' => 'Front', 'middleware' => ['web', 'accesslog.front', 'viewswitch']], function()
- //    {
-
-	    Route::get('/hello', function () {
+	Route::get('/front', function () {
 	    	return view('welcome');
 		});
-	// });
+
+	Route::group(['namespace' => 'Front'], function()
+    {
+    	Route::get('/cookie', 'CookieController@index');
+	});
+
+	    
 });
