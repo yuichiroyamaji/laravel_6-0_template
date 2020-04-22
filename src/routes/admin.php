@@ -13,6 +13,8 @@
 
 Route::domain(config('domain.admin'))->group(function () {
 
+	Auth::routes();
+
     Route::get('/admin', function () {
     	return view('welcome');
 	});
