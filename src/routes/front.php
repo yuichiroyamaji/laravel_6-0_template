@@ -13,11 +13,17 @@
 
 Route::domain(config('domain.front'))->group(function () {
 
-	Route::get('/front', function () {
-	    	return view('welcome');
-		});
+	// Route::get('/', function () {
+ //    	return view('welcome');
+	// });
 
-	Route::group(['namespace' => 'Front'], function()
+	Auth::routes();
+
+	Route::get('/', function () {
+    	return view('pc.front.index');
+	});
+
+	Route::group(['prefix' => 'front', 'namespace' => 'Front'], function()
     {
     	Route::get('/cookie', 'CookieController@index');
 	});
