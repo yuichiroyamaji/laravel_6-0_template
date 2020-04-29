@@ -13,9 +13,11 @@
 
 Route::domain(config('domain.admin'))->group(function () {
 
-	// Auth::routes();
+	Route::namespace('Admin')->group(function () {
 
-    Route::get('/admin', function () {
-    	return view('welcome');
+		Auth::routes();
+
+	    Route::get('/', 'AdminController@index')->name('home');
+
 	});
 });

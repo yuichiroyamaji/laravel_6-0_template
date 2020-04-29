@@ -13,20 +13,17 @@
 
 Route::domain(config('domain.front'))->group(function () {
 
-	// Route::get('/', function () {
- //    	return view('welcome');
-	// });
+	Route::namespace('Front')->group(function () {
 
-	Auth::routes();
+		Auth::routes();
 
-	Route::get('/', function () {
-    	return view('pc.front.index');
+		Route::get('/', function () {return view('pc.front.index');	})->name('home');
+		Route::get('/cookie', 'CookieController@index');
+
+		Route::group(['prefix' => 'member'], function () {
+			Route::get('/', 'MemberController@index');
+		});
+
 	});
-
-	Route::group(['prefix' => 'front', 'namespace' => 'Front'], function()
-    {
-    	Route::get('/cookie', 'CookieController@index');
-	});
-
 	    
 });

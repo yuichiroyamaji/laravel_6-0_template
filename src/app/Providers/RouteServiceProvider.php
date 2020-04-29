@@ -7,6 +7,16 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 
 class RouteServiceProvider extends ServiceProvider
 {
+    
+    // Userのリダイレクト先
+    public const USER_HOME = '/user/home';
+
+    // Adminのリダイレクト先
+    public const ADMIN_HOME = '/';
+
+    // Memberのリダイレクト先
+    public const MEMBER_HOME = '/member';
+
     /**
      * This namespace is applied to your controller routes.
      *
