@@ -27,7 +27,8 @@
       <section class='ios-click home-section home-fade home-full-height' id='home'>
         <div class='hero-slider'>
           <ul class='slides'>
-            <li class='bg-dark-30 bg-dark shop-page-header' style="background-image:url('images/background_logo.png')">
+            <!-- <li class='bg-dark-30 bg-dark shop-page-header' style="background-image:url('images/background_logo.png')"> -->
+            <li class='bg-dark-30 bg-dark shop-page-header' style="background-image: url('{{ asset('images/background_logo.png')}}'); width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
               <!-- <div class='titan-caption'>
                 <div class='caption-content'>
                   <div class='font-alt mb-30 titan-title-size-1'>This is Titan</div>
