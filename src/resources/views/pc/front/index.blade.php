@@ -294,7 +294,8 @@
             <p style="text-align:center"><img src='assets/images/event/20191221_iriya_bd.jpg' alt='iriya_bd_event'/></p> -->
             <!-- <p style="text-align:center"><img src='assets/images/event/20191026_zakuro_bd.jpg' alt='zakuro_event'/></p> -->
             <!-- <p style="text-align:center"><img src='assets/images/event/20200321_panst_event.jpg' alt='panst_event'/></p> -->
-            <p style="color:#fff; font-size:2em; text-align:center">随時更新予定！</p>
+            <!-- <p style="color:#fff; font-size:2em; text-align:center">随時更新予定！</p> -->
+            <p style="text-align:center"><img src="{{ asset('images/event/20200724-25_misaki_bd.jpg') }}" alt='2020_misaki_db_event'/></p>
             <!-- <p style="text-align:center"><img src='assets/images/event/20190710_misaki_db.jpg' alt='misaki_birthday_event'/></p> -->
             <!-- <p style="text-align:center"><img src='assets/images/event/rainy_day_event.jpg' alt='rainy_day_event'/></p> -->
             <!-- <p style="text-align:center"><img src='assets/images/event/20190406_sumire_01.jpg' alt='sumire_event'/></p>
